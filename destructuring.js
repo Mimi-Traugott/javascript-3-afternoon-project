@@ -5,7 +5,6 @@
 
   You can refresh the page at any time to re-run all the tests.
 */
-
 ////////// PROBLEM 1 //////////
 
 // Do not edit the code below.
@@ -16,14 +15,11 @@ var carDetails = {
   year: 1994
 }
 // Do not edit the code above.
-
 /*
   Use object destructuring to save the property values from the object carDetails into new variables. 
 */
-
 //Code Here
-
-
+let {color, make, model, year} = carDetails  
 
 ////////// PROBLEM 2 //////////
 
@@ -34,14 +30,11 @@ var carDetails = {
 */
 
 function greeting( obj ) {
-  //Code Here
-  
+  let {firstName, lastName, title} = obj
   // Do not edit the code below.
   return 'Hello, ' + title + ' ' + firstName + ' ' + lastName + '!';
   // Do not edit the code above.
 }
-
-
 
 ////////// PROBLEM 3 //////////
 
@@ -54,8 +47,25 @@ function greeting( obj ) {
 */
 
 //Code Here
+let obj = {
+  utah: 4, 
+  california: 4,
+  texas: 9,
+  arizona: 6
+}
 
-
+let{utah, california, texas, arizona} = obj
+function totalPopulation(obj){
+  obj.reduce(function(accum, element){
+    return accum + element
+  })
+  return totalPopulation
+}
+//
+let{utah, california, texas, arizona} = obj
+let totalPopulation = obj.reduce(function(accum, element){
+  return accum + element
+})
 
 ////////// PROBLEM 4 //////////
 
@@ -68,6 +78,9 @@ function greeting( obj ) {
 */
 
 //Code Here
+function ingredients(obj) {
+  let {carb, fat, protein} = obj
+}
 
 
 
