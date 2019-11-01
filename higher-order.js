@@ -20,10 +20,14 @@ const mixedNumbers = [6,3,1,7,5,2,6,8,9,4,2,7,9,3,1,8,4,3];
   (element, index, wholeArray)=>{}    Arrow Form
 */
 
-//Code Here
-let evenNumbers // = mixedNumbers.filter(/* Provide Your Callback Here */)
+let evenNumbers = mixedNumbers.filter(element => element % 2 === 0)
 
+//written NOT as an arrow function below
+// let evenNumbers = mixedNumbers.filter(function(element) {
+  // return element % 2 === 0;
+// })
 
+// let evenNumbers // = mixedNumbers.filter(/* Provide Your Callback Here */)
 
 ////////// PROBLEM 2 //////////
 
@@ -43,8 +47,13 @@ const prices = [15.00, 23.00, 78.00, 34.00, 12.00, 86.00, 12.00, 79.00, 32.00];
   (element, index, wholeArray)=>{}    Arrow Form
 */
 
-//Code Here
-let postTaxPrices // = prices.map(/* Provide Your Callback Here );
+let postTaxPrices = prices.map(element => element * 1.07)
+//Written NOT as an arrow function
+// let postTaxPrices = prices.map(function(element){
+//   return element * 1.07
+// })
+
+// let postTaxPrices // = prices.map(/* Provide Your Callback Here );
 
 
 
@@ -62,23 +71,39 @@ const populations = [8175133, 3792621, 2695598, 2100263];
   (runningTotal, curElement, curIndex, wholeArray)=>{} Arrow Form
 */
 
-//Code Here
-let totalPopulation //  = populations.reduce(/* Provide Your Callback Here */)
+let totalPopulation = populations.reduce((acc, curr) => acc + curr)
+// written Not as an arrow function
+// let totalPopulation = populations.reduce(function(acc, curr){
+//   return acc + curr
+// })
+
+// let totalPopulation //  = populations.reduce(/* Provide Your Callback Here */)
 
 
 
 ////////// PROBLEM 4 //////////
 
 // Do not edit the code below.
-const monstersInYourPocket = [{"monster":"Bulbabunny","CP":156},{"monster":"Bulbabunny","CP":135},
-{"monster":"Bulbabunny","CP":250},{"monster":"Ponylopse","CP":277},{"monster":"Ponylopse","CP":184},
-{"monster":"Pikadoughnet","CP":207},{"monster":"Bulbabunny","CP":139},{"monster":"Pikadoughnet","CP":47},
-{"monster":"Pikadoughnet","CP":175},{"monster":"WaterHorsia","CP":26},{"monster":"Ponylopse","CP":19},
-{"monster":"Pikadoughnet","CP":218},{"monster":"Charaflier","CP":101},{"monster":"WaterHorsia","CP":96},
-{"monster":"Pikadoughnet","CP":253},{"monster":"Sandmush","CP":146},{"monster":"Bulbabunny","CP":247},
-{"monster":"Charaflier","CP":55},{"monster":"Bulbabunny","CP":72},{"monster":"Pikadoughnet","CP":300},
-{"monster":"Sandmush","CP":262},{"monster":"Sandmush","CP":25},{"monster":"Charaflier","CP":215},
-{"monster":"Ponylopse","CP":125},{"monster":"Bulbabunny","CP":178}];
+const monstersInYourPocket = [{
+  "monster":"Bulbabunny",
+  "CP":156
+},
+  {"monster":"Bulbabunny",
+  "CP":135},
+{"monster":"Bulbabunny","CP":250},
+{"monster":"Ponylopse","CP":277},
+{"monster":"Ponylopse","CP":184},{"monster":"Pikadoughnet","CP":207},
+{"monster":"Bulbabunny","CP":139},{"monster":"Pikadoughnet","CP":47},
+{"monster":"Pikadoughnet","CP":175},{"monster":"WaterHorsia","CP":26},
+{"monster":"Ponylopse","CP":19},{"monster":"Pikadoughnet","CP":218},
+{"monster":"Charaflier","CP":101},{"monster":"WaterHorsia","CP":96},
+{"monster":"Pikadoughnet","CP":253},{"monster":"Sandmush","CP":146},
+{"monster":"Bulbabunny","CP":247},{"monster":"Charaflier","CP":55},
+{"monster":"Bulbabunny","CP":72},{"monster":"Pikadoughnet","CP":300},
+{"monster":"Sandmush","CP":262},{"monster":"Sandmush","CP":25},
+{"monster":"Charaflier","CP":215},{"monster":"Ponylopse","CP":125},
+{"monster":"Bulbabunny","CP":178}
+];
 // Do not edit the code above.
 
 /*
@@ -88,7 +113,6 @@ const monstersInYourPocket = [{"monster":"Bulbabunny","CP":156},{"monster":"Bulb
   Use the filter method to return only the monsters that have a CP of over 200.
 */
 
-//Code Here
 let myStrongest // = monstersInYourPocket.filter(/* Provide Your Callback Here */)
 
 
