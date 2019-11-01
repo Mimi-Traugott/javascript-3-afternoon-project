@@ -113,16 +113,24 @@ const monstersInYourPocket = [{
   Use the filter method to return only the monsters that have a CP of over 200.
 */
 
-let myStrongest // = monstersInYourPocket.filter(/* Provide Your Callback Here */)
+// let myStrongest = monstersInYourPocket(function(element){
+//   for(let key in monstersInYourPocket)
+// }
+
+
+// let myStrongest // = monstersInYourPocket.filter(/* Provide Your Callback Here */)
 
 
 
 ////////// PROBLEM 5 //////////
 
 // Do not edit code below.
-const orders = [{"price":15,"tax":0.09},{"price":42,"tax":0.07},{"price":56,"tax":0.11},
-{"price":80,"tax":0.11},{"price":69,"tax":0.06},{"price":68,"tax":0.14},
-{"price":72,"tax":0.14},{"price":51,"tax":0.09},{"price":89,"tax":0.15},
+const orders = [
+  {"price":15,"tax":0.09},
+  {"price":42,"tax":0.07},{"price":56,"tax":0.11},
+{"price":80,"tax":0.11},{"price":69,"tax":0.06},
+{"price":68,"tax":0.14},{"price":72,"tax":0.14},
+{"price":51,"tax":0.09},{"price":89,"tax":0.15},
 {"price":48,"tax":0.13}];
 // Do not edit code above.
 
