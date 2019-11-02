@@ -49,9 +49,9 @@ var employees = [
     2. If the employee's first name is Lorie, change her department to 'HR'.
     3. Return the updated employee array.
 */
-
-//Code Here
-
+function employeeUpdater(){
+  employees.filter(element => employees[i].firstName === "Theo")
+}
 
 
 ////////// PROBLEM 2 //////////

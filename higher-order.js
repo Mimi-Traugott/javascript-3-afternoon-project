@@ -55,8 +55,6 @@ let postTaxPrices = prices.map(element => element * 1.07)
 
 // let postTaxPrices // = prices.map(/* Provide Your Callback Here );
 
-
-
 ////////// PROBLEM 3 //////////
 
 // Do not edit the code below.
@@ -78,8 +76,6 @@ let totalPopulation = populations.reduce((acc, curr) => acc + curr)
 // })
 
 // let totalPopulation //  = populations.reduce(/* Provide Your Callback Here */)
-
-
 
 ////////// PROBLEM 4 //////////
 
@@ -112,15 +108,10 @@ const monstersInYourPocket = [{
 
   Use the filter method to return only the monsters that have a CP of over 200.
 */
-
-// let myStrongest = monstersInYourPocket(function(element){
-//   for(let key in monstersInYourPocket)
-// }
+let myStrongest = monstersInYourPocket.filter((pokeItem) => pokeItem.CP > 200)
 
 
 // let myStrongest // = monstersInYourPocket.filter(/* Provide Your Callback Here */)
-
-
 
 ////////// PROBLEM 5 //////////
 
@@ -138,7 +129,11 @@ const orders = [
   Use a higher order method to get all the order totals after adding in the sales tax. Your answer should be an array of numbers, one total for each order.
 */
 
-let orderTotals // Code here
+let addTax = (orderObj) => { 
+  let totals = orderObj.price * (orderObj.tax + 1)
+return totals
+} 
+let orderTotals =  orders.map(addTax)
 
 
 
@@ -158,6 +153,12 @@ const purchases = [{"owner":"Barry","price":103},{"owner":"Bob","price":75},
   Use a high order method to create to get the sum of bobsTotal.
 */
 
-let bobsTotal //Code Here
+let addToBobsTotal = (subtotal, purchase) => {
+  if(purchase.owner === "Bob") {
+    return subtotal + purchase.price
+  }
+  return subtotal
+}
+let bobsTotal = purchases.reduce(addToBobsTotal, 0)
 
 
