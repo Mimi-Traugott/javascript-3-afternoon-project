@@ -37,12 +37,14 @@ for(var key in values) {
 */
 
 function showValues (obj){
+  let newString = ''
   for(var key in obj){
-    return (obj[key])
+    newString = newString + obj[key]
+    console.log(obj[key])
   }
+  return newString
 }
-
-
+showValues(values)
 
 ////////// PROBLEM 2 //////////
 
