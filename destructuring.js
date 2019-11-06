@@ -19,7 +19,9 @@ var carDetails = {
   Use object destructuring to save the property values from the object carDetails into new variables. 
 */
 //Code Here
-let {color, make, model, year} = carDetails  
+
+let {color, make, model, year} = carDetails;
+
 
 ////////// PROBLEM 2 //////////
 
