@@ -172,14 +172,13 @@ function looper(){
   for(let i = 0; i<numsArr.length; i++){
     for (let j = 0; j<numsArr[i].length; j++){
       if (numsArr[i][j] % 2 === 1){
-        nums[i][j] = 'odd'
+        numsArr[i][j] = 'odd'
       } else {
         numsArr[i][j] = 'even'
       }
     }
-
   }
   return numsArr[i][j];
 }
-// looper()
+looper()
 

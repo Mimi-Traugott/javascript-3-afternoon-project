@@ -24,8 +24,19 @@ let evenNumbers = mixedNumbers.filter(element => element % 2 === 0)
 
 //written NOT as an arrow function below
 // let evenNumbers = mixedNumbers.filter(function(element) {
-  // return element % 2 === 0;
+//   return element % 2 === 0;
 // })
+
+ // written as a standard for loop
+//  function even(arr){
+//    let newArr = []
+//    for(i=0; i<arr.length; i++){
+//    if (arr[i]%2 === 0){
+//      newArr.push(arr[i])
+//    }
+//  } return newArr
+// }
+// console.log(even(mixedNumbers))
 
 // let evenNumbers // = mixedNumbers.filter(/* Provide Your Callback Here */)
 
@@ -109,7 +120,6 @@ const monstersInYourPocket = [{
   Use the filter method to return only the monsters that have a CP of over 200.
 */
 let myStrongest = monstersInYourPocket.filter((pokeItem) => pokeItem.CP > 200)
-
 
 // let myStrongest // = monstersInYourPocket.filter(/* Provide Your Callback Here */)
 
