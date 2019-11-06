@@ -79,7 +79,7 @@ let totalPopulation = obj.reduce(function(accum, element){
   Push these new variables to an array and return the array. 
 */
 
-//Code Here
+Code Here
 function ingredients(obj) {
   let {carb, fat, protein} = obj
 }

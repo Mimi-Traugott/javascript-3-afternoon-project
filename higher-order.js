@@ -80,11 +80,13 @@ const populations = [8175133, 3792621, 2695598, 2100263];
   (runningTotal, curElement, curIndex, wholeArray)=>{} Arrow Form
 */
 
-let totalPopulation = populations.reduce((acc, curr) => acc + curr)
+let totalPopulation = populations.reduce((acc, curr) => acc + curr, 0)
+
+
 // written Not as an arrow function
 // let totalPopulation = populations.reduce(function(acc, curr){
 //   return acc + curr
-// })
+// }, 0)
 
 // let totalPopulation //  = populations.reduce(/* Provide Your Callback Here */)
 
@@ -162,13 +164,15 @@ const purchases = [{"owner":"Barry","price":103},{"owner":"Bob","price":75},
 /*
   Use a high order method to create to get the sum of bobsTotal.
 */
+let bobsTotal=purchases.filter(el => el.owner === 'Bob').reduce((tot, el) => tot + el.price, 0)
 
-let addToBobsTotal = (subtotal, purchase) => {
-  if(purchase.owner === "Bob") {
-    return subtotal + purchase.price
-  }
-  return subtotal
-}
-let bobsTotal = purchases.reduce(addToBobsTotal, 0)
+
+// let addToBobsTotal = (subtotal, purchase) => {
+//   if(purchase.owner === "Bob") {
+//     return subtotal + purchase.price
+//   }
+//   return subtotal
+// }
+// let bobsTotal = purchases.reduce(addToBobsTotal, 0)
 
 
