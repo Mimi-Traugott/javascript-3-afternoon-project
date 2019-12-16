@@ -86,9 +86,10 @@ function removeDuplicates(){
         workplaceAccidents.splice(i, 1)
       }
     }
-  } return workplaceAccidents
+  } 
+  return workplaceAccidents
 }
-
+removeDuplicates()
 // is 12 === 12 AND i and j are NOT the same index.
 
 ////////// PROBLEM 3 //////////

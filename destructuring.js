@@ -9,19 +9,18 @@
 
 // Do not edit the code below.
 var carDetails = {
-  color: 'red',
-  make: 'toyota',
-  model: 'tacoma',
+  color: "red",
+  make: "toyota",
+  model: "tacoma",
   year: 1994
-}
+};
 // Do not edit the code above.
 /*
   Use object destructuring to save the property values from the object carDetails into new variables. 
 */
 //Code Here
 
-let {color, make, model, year} = carDetails;
-
+let { color, make, model, year } = carDetails;
 
 ////////// PROBLEM 2 //////////
 
@@ -31,13 +30,13 @@ let {color, make, model, year} = carDetails;
   The property names are firstName, lastName, and title.
 */
 
-function greeting( obj ) {
-  let {firstName, lastName, title} = obj
+function greeting(obj) {
+  let { firstName, lastName, title } = obj;
   // Do not edit the code below.
-  return 'Hello, ' + title + ' ' + firstName + ' ' + lastName + '!';
+  return "Hello, " + title + " " + firstName + " " + lastName + "!";
   // Do not edit the code above.
 }
-
+let { firstName, lastName, title } = obj;
 ////////// PROBLEM 3 //////////
 
 /*
@@ -47,30 +46,13 @@ function greeting( obj ) {
   Use object destructuring to save the property values to new variables.
   Sum up the values and return the total number.
 */
-
 //Code Here
-let obj = {
-  utah: 4, 
-  california: 4,
-  texas: 9,
-  arizona: 6
+function totalPopulation(obj) {
+  let { utah, california, texas, arizona } = obj;
+  let totals = utah + california + texas + arizona;
+  return totals;
 }
-
-let{utah, california, texas, arizona} = obj
-function totalPopulation(obj){
-  obj.reduce(function(accum, element){
-    return accum + element
-  })
-  return totalPopulation
-}
-//
-let{utah, california, texas, arizona} = obj
-let totalPopulation = obj.reduce(function(accum, element){
-  return accum + element
-})
-
 ////////// PROBLEM 4 //////////
-
 /*
   Write a function called ingredients that will take in an object. 
   This object will have 3 properties named carb, fat, and protein. 
@@ -79,39 +61,70 @@ let totalPopulation = obj.reduce(function(accum, element){
   Push these new variables to an array and return the array. 
 */
 
-Code Here
+// Code Here
+let obj = {
+  carb: "yes",
+  fat: "no",
+  protein: "some"
+};
+
 function ingredients(obj) {
-  let {carb, fat, protein} = obj
+  let { carb, fat, protein } = obj;
+  //now you have var carb = "yes", var fat = "no", var protein = "some"
+  // let newObj = { carb, fat, protein};
+  let newList = [];
+  for (var prop in obj) 
+  newList.push(obj[prop]);
+  return newList;
 }
-
-
-
 ////////// PROBLEM 5 //////////
-
 /*
   Now we will use object destructuring as the function's parameter instead of destructuring the object inside of the function declaration.
   Example:
     function example( {one, two, three} ) {
       return one + two + three
     }
-
   Write a function called largeNumbers that will take a destructured object as it's parameter.
   The object properties will be named first, second, and third and their values will be numbers.
   Find the smallest number of the three and return that number.
 */
-
-//Code Here
-
-
-
+// let obj = {
+//   first: 3,
+//   second: 44,
+//   third: 5
+// }
+function largeNumbers({ first, second, third }) {
+  if(first<second && first<third) {
+    return first
+  } else {
+    if (second< first && second<third){
+      return second
+    } else {
+      return third
+    }
+  }
+}
 ////////// PROBLEM 6 //////////
-
 /*
   Write a function called numberGroups that will take a destructured object as it's parameter.
   The object properties will be named a, b, and c and their values will be arrays of numbers.
   Find the longest array and return that array.
 */
-
 //Code Here
+// let obj = {
+//   a: [1,2],
+//   b: [4,5,6],
+//   c: [7,8,9,10]
+// }
 
-
+function numberGroups({a,b,c}){
+  if(a.length>b.length && a.length>c.length){
+    return a
+  } else {
+    if (b.length>a.length && b.length>c.length){
+      return b
+    } else {
+      return c
+    }
+  }
+}
