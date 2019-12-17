@@ -159,7 +159,6 @@ var numsArr = [
 [7, 8, 9, 10, 11]
 ];
 // Do not edit the code above.
-
 /*
   Above is an array of arrays. Use two for loops.
     1. Write a function called 'looper'. 
@@ -168,18 +167,18 @@ var numsArr = [
         If the number is even, replace it with 'even'.
     4. Return the modified numsArr.
 */
-
-function looper(){
+function looper(arr){
   for(let i = 0; i<numsArr.length; i++){
     for (let j = 0; j<numsArr[i].length; j++){
-      if (numsArr[i][j] % 2 === 1){
-        numsArr[i][j] = 'odd'
+      if (numsArr[i][j] % 2 === 0){
+        numsArr[i][j] = "even"
       } else {
-        numsArr[i][j] = 'even'
+        numsArr[i][j] = "odd"
       }
     }
   }
   return numsArr[i][j];
 }
-looper()
+looper(numsArr)
+
 
