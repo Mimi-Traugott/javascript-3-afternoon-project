@@ -167,18 +167,24 @@ var numsArr = [
         If the number is even, replace it with 'even'.
     4. Return the modified numsArr.
 */
-function looper(arr){
-  for(let i = 0; i<numsArr.length; i++){
-    for (let j = 0; j<numsArr[i].length; j++){
-      if (numsArr[i][j] % 2 === 0){
-        numsArr[i][j] = "even"
-      } else {
-        numsArr[i][j] = "odd"
-      }
+// function looper(arr){
+//   for(let i = 0; i<numsArr.length; i++){
+//     for (let j = 0; j<numsArr[i].length; j++){
+//       if (numsArr[i][j] % 2 === 0){
+//         numsArr[i].splice(j,1,"even")
+//       } else {
+//         numsArr[i].splice(j,1, "odd")
+//       }
+//     }return numsArr[i][j];
+//   }
+// }
+// looper(numsArr)
+var looper = () => {
+  for(let i = 0; i < numsArr.length; i++){
+    for(let j = 0; j < numsArr[i].length; j++){
+    if (numsArr[i][j] % 2 === 0)
+    numsArr[i].splice(j, 1, 'even')
+    else numsArr[i].splice(j, 1, 'odd')
     }
-  }
-  return numsArr[i][j];
-}
-looper(numsArr)
-
-
+  };return numsArr;
+};
